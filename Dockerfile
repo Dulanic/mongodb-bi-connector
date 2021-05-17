@@ -8,7 +8,7 @@ RUN apt-get install -y rsyslog nano curl wget
 WORKDIR /tmp
 RUN wget https://info-mongodb-com.s3.amazonaws.com/mongodb-bi/v2/mongodb-bi-linux-x86_64-debian10-v2.14.3.tgz -O bi-connector.tgz && \
     tar -xvzf bi-connector.tgz && rm bi-connector.tgz && \
-    mv /tmp/mongodb-bi-linux-x86_64-debian92-v2.12.0 /mongosqld
+    mv /tmp/mongodb-bi-linux-x86_64-debian10-v2.14.3 /mongosqld
 
 # Setup default environment variables
 ENV MONGODB_HOST mongodb
