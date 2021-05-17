@@ -2,11 +2,11 @@
 # note: rsyslog & curl (openssl,etc) needed as dependencies too
 FROM debian:stretch
 RUN apt-get update
-RUN apt-get install -y rsyslog nano curl
+RUN apt-get install -y rsyslog nano curl wget
 
 # Download BI Connector to /mongosqld
 WORKDIR /tmp
-RUN curl https://info-mongodb-com.s3.amazonaws.com/mongodb-bi/v2/mongodb-bi-linux-x86_64-debian10-v2.14.3.tgz -o bi-connector.tgz && \
+RUN wget https://info-mongodb-com.s3.amazonaws.com/mongodb-bi/v2/mongodb-bi-linux-x86_64-debian10-v2.14.3.tgz -O bi-connector.tgz && \
     tar -xvzf bi-connector.tgz && rm bi-connector.tgz && \
     mv /tmp/mongodb-bi-linux-x86_64-debian92-v2.12.0 /mongosqld
 
