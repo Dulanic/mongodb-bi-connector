@@ -1,8 +1,8 @@
 # Start from fresh debian stretch & add some tools
 # note: rsyslog & curl (openssl,etc) needed as dependencies too
 FROM debian:stretch
-RUN apt update
-RUN apt install -y rsyslog nano curl
+RUN apt-get update
+RUN apt-get install -y rsyslog nano curl
 
 # Download BI Connector to /mongosqld
 WORKDIR /tmp
