@@ -20,5 +20,11 @@ services:
     environment:
       MONGODB_HOST: mongodb
       MONGODB_PORT: 27017  
+      SCHEMA_REFRESH: 60
 
 ```
+
+## Forked from ryanhs/mongodb-bi-connector-docker
+Forked and following enhancements made:
+  * Added ARG for version to make it easier to update version. 
+  * Added auto schema refresh
