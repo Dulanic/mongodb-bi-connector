@@ -1,4 +1,4 @@
-ARG VERSION=v2.14.3
+ARG VERSION=v2.14.4
 
 # Start from fresh debian stretch & add some tools
 # note: rsyslog & curl (openssl,etc) needed as dependencies too
