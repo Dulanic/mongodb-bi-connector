@@ -28,3 +28,4 @@ services:
 Forked and following enhancements made:
   * Added ARG for version to make it easier to update version. 
   * Added auto schema refresh
+
